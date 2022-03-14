@@ -5,13 +5,9 @@ orbs:
 jobs:
   build:
     docker:
-      - image: "cimg/base:stable"
+      - image: cimg/node:16.13.2
     steps:
-      - run:
-          name: "Update Node.js and npm"
-          command: |
-            curl -sSL "https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v16.14.0-linux-x64    /bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
+      - node/install
       - checkout
       - aws-cli/setup
       - run:
