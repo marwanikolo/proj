@@ -7,5 +7,6 @@
         "backend:build": "cd udagram-api && npm run build",
         "frontend:deploy": "cd udagram-frontend && npm run deploy"
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "engines": { "node" : "14.16.0" }
 }
