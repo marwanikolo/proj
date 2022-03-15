@@ -1,1 +1,1 @@
-aws s3 cp --recursive --acl public-read ./build s3://tst123/
+aws s3 cp --recursive --acl public-read ./dist s3://tst123/
