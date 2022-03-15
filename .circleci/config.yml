@@ -15,15 +15,6 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
-          name: Get and install node version manager.
-          command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-      - run:
-          name: Install Node version 16.13 using NVM
-          command: nvm install 16.13
-      - run:
-          name: Use Node version 16.13 
-          command: nvm use 16.13     
-      - run:
           name: Front-End Install
           command: |
             npm run frontend:install
